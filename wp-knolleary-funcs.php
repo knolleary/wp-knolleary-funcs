@@ -85,7 +85,7 @@ function wp_knolleary_init() {
       );
    
    foreach ( $useragents as $ua ) {
-      if (preg_match('/$ua/i',$_SERVER['HTTP_USER_AGENT'])) {
+      if (preg_match("/$ua/i",$_SERVER['HTTP_USER_AGENT'])) {
          $wp_knolleary_is_mobile = true;
          break;
       }
