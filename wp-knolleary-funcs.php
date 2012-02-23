@@ -100,7 +100,7 @@ function wp_knolleary_is_mobile() {
 
 function wp_knolleary_shrink_flickr_images($content) {
    if (wp_knolleary_is_mobile()) {
-      return preg_replace('/(static\.?flickr.com\/.*?\/.*?_.*?)(\.jpg)/',"$1_m$2",$content);
+      return preg_replace('/(static\.?flickr.com\/.*?\/[^_]*?_[^_]*?)(\.jpg)/',"$1_m$2",$content);
    } else {
       return $content;
    }
